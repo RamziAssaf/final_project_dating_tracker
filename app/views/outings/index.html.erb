@@ -13,9 +13,9 @@
 
       <% @outings.each do |outing| %>
       <tr>
-      <% outinguserid = outing.user_id %>
-        <td><a href="/outings/<%= outinguserid %>"><%= @partners.find(outinguserid).user_id_2 %></a></td>
-        <!-- <td><%= outing.user_id %></td> -->
+        <% partnerid = outing.user_id %>
+
+        <td><%= outing.user_id %></td>
         <td><%= outing.activity %></td>
         <td><%= outing.date %></td>
       </tr>
