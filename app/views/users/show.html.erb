@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="row">
+		<h2>My Profile</h2>
+	</div>
+    
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-12">
+           	<table style="width:100%">
+	        	<tr>
+		        	<th>Username:</th>
+		   			<td><%= @user.username %></td>
+		   		</tr>
+		   		<tr><td><p> </p></td><td><p> </p></td></tr>
+				<tr>
+					<th>Email:</th>
+					<td><%= @user.email %></td>
+				</tr>
+				<tr><td><p> </p></td><td><p> </p></td></tr>
+				<tr>
+					<th>Password:</th>
+					<td><%= @user.password %></td>
+				</tr>
+				<tr><td><p> </p></td><td><p> </p></td></tr>
+				<tr>
+					<th>Gender:</th>
+					<td><%= @user.gender %></td>
+				</tr>
+				<tr><td><p> </p></td><td><p> </p></td></tr>
+				<tr>
+					<th>Age:</th>		
+					<td><%= @user.age %></td>
+				</tr>
+				<tr><td><p> </p></td><td><p> </p></td></tr>
+				<tr>
+					<th>Photo:</th>		
+					<td><%= @user.photo %></td>
+				</tr>
+				<tr><td><p> </p></td><td><p> </p></td></tr>
+				<tr><td><p> </p></td><td><p> </p></td></tr>
+				<tr><td><p> </p></td><td><p> </p></td></tr>
+			</table>
+
+
+			<a href="/users/edit" class="btn btn-success" role="button">Edit Profile</a>
+			  or  
+			<%= link_to "Back", :back %>
+
+        </div>
+    </div>
+</div>
+
+

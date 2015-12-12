@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>Partner #<%= @partner.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>User id 1</dt>
+      <dd><%= @partner.user_id_1 %></dd>
+
+      <dt>User id 2</dt>
+      <dd><%= @partner.user_id_2 %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/partners" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/partners/<%= @partner.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_partner/<%= @partner.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

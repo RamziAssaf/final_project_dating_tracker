@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>Outings with <%= @partner.user_id_2 %></h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Activity</th>
+        <th>Date</th>
+        <th>Action</th>
+        <th></th>
+      </tr>
+
+      <% @my_outings.each do |outing| %>
+      <tr>
+        <td><%= outing.activity %></td>
+        <td><%= outing.date %></td>
+        <td>
+          <!-- <a href="/outings/<%= outing.id %>" class="btn btn-primary">Show</a> -->
+          <a href="/outings/<%= outing.id %>/edit/<%= @partner_id %>" class="btn btn-warning">Edit</a>
+          <a href="/delete_outing/<%= outing.id %>/<%= @partner_id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+        <td class="hidden"><%= outing.user_id %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <a href="/outings/new/<%= @partner_id %>" class="btn btn-md btn-success">Add Outing</a>
+  or
+  <a href="/partners">Back to Partners</a>
+</div>
